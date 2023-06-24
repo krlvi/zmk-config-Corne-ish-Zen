@@ -9,12 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-/ {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform = &five_column_transform;
-  };
-};
+#define QWERTY 0
+#define NUMBER 1
+
+// / {
+//   chosen {
+//     zmk,matrix_transform = &default_transform;
+//     //zmk,matrix_transform = &five_column_transform;
+//   };
+// };
 
 / {
         keymap {
@@ -36,7 +39,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp MINUS
-   &lt 1 TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &lt NUMBER TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSFT
                   &kp LCTL &kp LGUI &kp BSPC  &kp SPACE &kp RGUI &kp ENT
                         >;
